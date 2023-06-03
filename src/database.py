@@ -34,7 +34,8 @@ class Bookmark(db.Model):
         characters = string.digits + string.ascii_letters
         picked_chars = "".join(random.choices(characters, k=3))
 
-        if link := self.query.filter_by(short_url=picked_chars).first():
+        link = self.query.filter_by(short_url=picked_chars).first()
+        if link:
             self.generate_short_url()
         else:
             return picked_chars

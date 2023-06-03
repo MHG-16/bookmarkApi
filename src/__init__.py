@@ -30,6 +30,8 @@ def create_app(test_config=None):
     db.app = app
     db.init_app(app)
     
+    app.config["JWT_ALGORITHM"] = "HS256"
+    
     JWTManager(app)
     
     Swagger(app, config=swagger_config, template=template)

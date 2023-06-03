@@ -1,0 +1,11 @@
+Token Refresh
+---
+tags:
+  - Authentication
+
+responses:
+  200:
+    description: Access Token updated
+
+security:
+  - RefreshToken: []

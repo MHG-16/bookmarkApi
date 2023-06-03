@@ -1,0 +1,23 @@
+Get one Bookmarks
+---
+tags:
+  - Bookmarks
+
+parameters:
+  - in: path
+    name: id
+    description: Bookmark ID
+    required: true
+
+responses:
+  200:
+    description: ok
+  
+  401: 
+    description: Unauthorizated
+  
+  404:
+    description: Bookmark not found
+
+security:
+  - Bearer: []

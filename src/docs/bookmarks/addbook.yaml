@@ -1,0 +1,39 @@
+Add bookmark
+---
+tags:
+  - Bookmarks
+
+parameters:
+  - name: body
+    description: The body contain body of bookmark and url of bookmark
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "body"
+        - "url"
+      properties:
+        body:
+          type: "string"
+          example: "My site"
+        url: 
+          type: "string"
+          example: "mhg16.vercel.app"
+
+responses:
+  201:
+    description: bookmark add succesfully
+  
+  400: 
+    description: Invalid URL
+
+  401:
+    description: Unauthorized
+  
+  409: 
+    description: "bookmark with this url is found"
+
+security:
+  - Bearer: []
+  

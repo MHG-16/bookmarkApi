@@ -1,0 +1,37 @@
+Edit one bookmark
+---
+tags:
+  - Bookmarks
+parameters:
+  - in: path
+    name: id
+    required: true
+  - name: body
+    description: The body contain new body of bookmark and new url of bookmark
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "body"
+        - "url"
+      properties:
+        body:
+          type: "string"
+          example: "My site"
+        url:
+          type: "string"
+          example: "mhg16.vercel.app"
+
+responses:
+  200: 
+    description: ok
+
+  400: 
+    description: Bad request
+  
+  401: 
+    description: Unauthorizated
+
+security:
+  - Bearer: []

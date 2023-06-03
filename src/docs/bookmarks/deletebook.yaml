@@ -1,0 +1,21 @@
+Delete one bookmark
+---
+tags:
+  - Bookmarks
+parameters:
+  - in: path
+    name: id
+    required: true
+
+responses:
+  204:
+    description: Delete successfully
+  
+  401:
+    description: Unauthorizated
+  
+  404:
+    description: bookmark not found
+
+security: 
+  - Bearer: []

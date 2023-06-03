@@ -1,0 +1,14 @@
+GET stats about bookmarks
+---
+tags:
+  - Bookmarks
+
+responses:
+  200:
+    description: Bookmarks stats
+
+  401:
+    description: Fails to get items due to authentication error
+
+security:
+  - Bearer: []

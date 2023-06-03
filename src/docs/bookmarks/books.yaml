@@ -1,0 +1,27 @@
+Get all bookmark of current user
+---
+tags:
+  - Bookmarks
+
+parameters:
+  - in: query
+    name: page
+    schema:
+      type: integer
+    description: Page current
+  
+  - in: query
+    name: per_page
+    schema:
+      type: integer
+    description: number Bookmarks per page
+
+responses:
+  200:
+    description: ok
+  
+  401: 
+    description: Unathorizated
+
+security:
+  - Bearer: []

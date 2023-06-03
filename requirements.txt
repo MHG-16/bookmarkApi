@@ -16,7 +16,7 @@ mistune==2.0.5
 packaging==23.1
 PyJWT==2.7.0
 pyrsistent==0.19.3
-python-dotenv==1.0.0
+python-dotenv
 PyYAML==6.0
 six==1.16.0
 SQLAlchemy==2.0.15
